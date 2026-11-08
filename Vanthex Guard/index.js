@@ -1,3 +1,16 @@
+const express = require("express");
+
+const app = express();
+
+app.use((req, res) => {
+  res.status(200).send("Bot 7/24 Aktif!");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Web sunucusu ${PORT} portunda aktif.`);
+});
+
 const fs = require('fs');
 const path = require('path');
 const DM_CHANNELS_FILE = path.join(__dirname, 'dmchannels.json');
