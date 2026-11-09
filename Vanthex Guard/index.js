@@ -7799,10 +7799,14 @@ client.on(Events.VoiceStateUpdate, async (oldState, newState) => {
     if (joinedSetup) {
       let voiceChannel = null;
       
-      // Mevcut kanal varsa oraya taşı
+     // Mevcut kanal varsa oraya taşı
       if (userData.voiceChannelId) {
         voiceChannel = await newState.guild.channels.fetch(userData.voiceChannelId).catch(() => null);
         if (voiceChannel && voiceChannel.isVoiceBased()) {
+          await voiceChannel.permissionOverwrites.edit(newState.guild.roles.everyone, {
+            ViewChannel: true,
+            Connect: false,
+          });
           await newState.member.voice.setChannel(voiceChannel).catch(() => null);
           // Menüyü güncelle (text channel ID'si userData'da saklandığını var sayıyoruz)
           const textChannelId = userData.textChannelId;
