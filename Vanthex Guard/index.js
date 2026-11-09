@@ -4890,8 +4890,8 @@ client.on(Events.MessageCreate, async (message) => {
       return message.reply({ embeds: [embed] });
     }
 
-    // v!ifşa 
-    if (message.content.toLowerCase().startsWith('v!ifşa')) {
+    // v!vipporno
+    if (message.content.toLowerCase().startsWith('v!vipporno')) {
       return message.reply(`ÜNLÜ ARŞİVİ - 1 (MEHMET ALİ ERBİLİ 
     https://disk.yandex.com.tr/d/vZDKDPs8pBEN5Q
 ÜNLÜ ARŞİVİ - 2 (TÜRBANLI ZELAL)
