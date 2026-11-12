@@ -6,7 +6,7 @@ app.use((req, res) => {
   res.status(200).send("Bot 7/24 Aktif!");
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Web sunucusu ${PORT} portunda aktif.`);
 });
